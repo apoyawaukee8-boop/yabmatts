@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f3">
+    <title>Sign in | TamBayts</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="auth.css">
+  </head>
+  <body class="login-page auth-light">
+    <main class="auth-shell">
+      <a class="brand" href="index.html">TamBayts</a>
+
+      <section class="auth-card">
+        <p class="eyebrow">CAMPUS FOOD ORDERING</p>
+        <h1>Welcome back</h1>
+        <p class="subhead">Sign in to order food or manage the campus menu.</p>
+
+        <form id="login-form">
+          <label>
+            Email
+            <input
+              name="email"
+              type="email"
+              autocomplete="username"
+              placeholder="you@school.edu"
+              required
+            >
+          </label>
+
+          <label>
+            Password
+            <div class="password-row">
+              <input
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                required
+              >
+              <button type="button" class="reveal" aria-label="Show password">◉</button>
+            </div>
+          </label>
+
+          <label>
+            Sign in as
+            <select name="role">
+              <option value="student">Student</option>
+              <option value="admin">Administrator</option>
+            </select>
+          </label>
+
+          <p class="forgot">
+            Forgot your password?
+            <span>Contact your administrator.</span>
+          </p>
+          <p class="form-error" id="auth-error" role="alert"></p>
+          <button class="submit-button" type="submit">
+            Sign in <span>→</span>
+          </button>
+        </form>
+
+        <p class="auth-footer">
+          New student? <a href="register.html">Create an account</a><br>
+          <a class="setup-link" href="setup-admin.html" hidden>
+            First-time setup: create administrator
+          </a>
+        </p>
+      </section>
+
+      <p class="fine-print">TamBayts · Campus dining, made simple</p>
+    </main>
+
+    <script src="auth.js?v=20261028-3"></script>
+  </body>
+</html>

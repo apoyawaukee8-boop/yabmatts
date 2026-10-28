@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TamBayts | Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=20261028-2" />
+  </head>
+  <body data-auth="student">
+    <main class="app-shell simple-page">
+      <header class="hero compact-hero">
+        <div class="brand-lockup">
+          <a class="brand" href="index.html">TamBayts</a>
+        </div>
+        <nav class="desktop-links" aria-label="Account navigation">
+          <a href="index.html">Foods</a>
+          <a href="orders.html">My orders</a>
+          <a href="profile.html">Profile</a>
+          <a class="desktop-cart current-page" href="cart.html" aria-current="page">Cart <b id="cart-badge" class="cart-count">0</b></a>
+        </nav>
+      </header>
+
+      <section class="page-content cart-page">
+        <div id="cart-edit-view">
+          <p class="eyebrow">Almost there</p>
+          <h1>Your cart</h1>
+          <div class="cart-list" id="cart-page-items"></div>
+
+          <div class="order-summary" id="cart-order-summary" hidden>
+            <div>
+              <span>Subtotal</span>
+              <strong id="cart-page-total">₱0</strong>
+            </div>
+            <button id="review-order" type="button">Review order</button>
+          </div>
+        </div>
+
+        <section class="order-review" id="order-review" hidden aria-labelledby="order-review-title">
+          <button class="profile-back" id="back-to-cart" type="button">‹ Back to cart</button>
+          <p class="eyebrow">CHECK BEFORE PLACING</p>
+          <h1 id="order-review-title">Review your order</h1>
+          <div class="order-review-list" id="order-review-items"></div>
+          <a class="add-more-foods" href="index.html#food-grid">＋ Add more foods</a>
+          <div class="payment-method-card">
+            <span class="payment-cash-icon" aria-hidden="true">₱</span>
+            <span class="payment-method-copy"><small>Payment method</small><strong>Cash on pickup</strong><small>Pay at the canteen when you collect your order.</small></span>
+          </div>
+          <div class="order-review-total"><span>Total</span><strong id="review-order-total">₱0</strong></div>
+          <button class="confirm-order-button" id="confirm-place-order" type="button">Confirm and place order</button>
+        </section>
+      </section>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item" href="profile.html" aria-label="Profile"><span>◉</span></a>
+        <a class="nav-item" href="profile.html?view=favorites" aria-label="Favorites"><span>★</span></a>
+        <a class="nav-item" href="index.html" aria-label="Foods"><span>⌂</span><small class="nav-label">Foods</small></a>
+        <a class="nav-item" href="orders.html" aria-label="Orders"><span>▤</span></a>
+        <a class="nav-item cart-nav active" href="cart.html" aria-label="Cart">
+          <span>🛒</span>
+          <b class="cart-badge">0</b>
+        </a>
+      </nav>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app-data.js"></script>
+    <script src="auth.js?v=20261028-3"></script>
+    <script src="pages.js?v=20261028-6"></script>
+  </body>
+</html>
